@@ -194,7 +194,7 @@ body {
   margin: 0;
 }
 
-/* 🌟 تم تجميع الخصائص المشتركة لجميع عناصر القائمة هنا لمنع التكرار */
+
 .summary-item {
   list-style: none;
   display: flex;
@@ -221,7 +221,7 @@ body {
   color: var(--color-dark-gray-blue);
 }
 
-/* 🌟 الآن الفئات تحتوي فقط على الأنماط اللونية الخاصة بها */
+
 .reaction {
   background-color: hsla(var(--color-reaction), 0.07);
   color: hsl(var(--color-reaction));
