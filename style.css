@@ -18,7 +18,7 @@
   --color-pale-blue: hsl(221, 100%, 96%);
   --color-light-lavender: hsl(241, 100%, 89%);
   --color-dark-gray-blue: hsl(224, 30%, 27%);
-  --color-light-gray: lightgray;
+  --color-light-gray: hsl(241, 100%, 89%, 0.6); 
 
   /* --- Layout & Spacing Variables --- */
   --radius-card: 1.875rem;
@@ -36,7 +36,7 @@
   
   --feedback-text-max-width: 14.375rem;
   
-
+  /* 🌟 Fluid card width without hard-coded pixels */
   --card-max-width: clamp(21.875rem, 90vw, 40.625rem); 
 
   /* --- Circle Responsive Size --- */
