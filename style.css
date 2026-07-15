@@ -80,9 +80,7 @@ body {
   min-height: 100vh;
   padding: 0; 
 }
-
-.container .result,
-.container .summary {
+.result, .summary {
   flex: 1;
 }
 
