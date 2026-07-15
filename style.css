@@ -1,54 +1,52 @@
 :root {
   /* --- Colors (Summary Section) --- */
-  --Reaction-value: 0, 100%, 67%;
-  --Memory-value: 39, 100%, 56%;
-  --verbal-value: 166, 100%, 37%;
-  --visual-value: 234, 85%, 45%;
+  --color-reaction: 0, 100%, 67%;
+  --color-memory: 39, 100%, 56%;
+  --color-verbal: 166, 100%, 37%;
+  --color-visual: 234, 85%, 45%;
 
   /* --- Colors (Result Section) --- */
-  --circle-color: hsla(256, 72%, 46%, 1);
-  --button-color: hsla(241, 72%, 46%, 0);
-
+  --color-circle: hsla(256, 72%, 46%, 1);
+  --color-btn-hover: hsla(241, 72%, 46%, 0);
+  
   /* --- Background Colors (Gradients) --- */
-  --slate-blue-background: hsl(252, 100%, 67%);
-  --royal-blue-background: hsl(241, 81%, 54%);
+  --color-bg-slate-blue: hsl(252, 100%, 67%);
+  --color-bg-royal-blue: hsl(241, 81%, 54%);
 
   /* --- Neutral Colors --- */
-  --White: hsl(0, 0%, 100%);
-  --Pale-blue: hsl(221, 100%, 96%);
-  --Light-lavender: hsl(241, 100%, 89%);
-  --Dark-gray-blue: hsl(224, 30%, 27%);
-  --Light-gray: lightgray;
+  --color-white: hsl(0, 0%, 100%);
+  --color-pale-blue: hsl(221, 100%, 96%);
+  --color-light-lavender: hsl(241, 100%, 89%);
+  --color-dark-gray-blue: hsl(224, 30%, 27%);
+  --color-light-gray: lightgray;
 
   /* --- Layout & Spacing Variables --- */
   --radius-card: 1.875rem;
   --radius-item: 0.75rem;
   --radius-btn: 50px;
-
+  
   --padding-container: 1.25rem;
-
-  --padding-card: clamp(1.5rem, 5vw, 2.5rem);
+  --padding-card: clamp(1.5rem, 5vw, 2.5rem); 
   --padding-item: 1rem;
   --padding-btn: 1rem 2rem;
-
+  
   --gap-layout: 1.5rem;
   --gap-list: 1rem;
   --gap-item-content: 10px;
-
+  
   --feedback-text-max-width: 14.375rem;
-
   --card-max-width: clamp(350px, 90vw, 650px);
 
+  /* --- Circle Responsive Size --- */
+  --circle-size: clamp(7.5rem, 15vw, 8.75rem); 
   /* --- Typography --- */
   --font-family: "Hanken Grotesk", sans-serif;
-  --result-size: 1rem;
-
-  --score-size: clamp(2.8rem, 8vw, 3.4375rem);
-
-  --feedback-status-size: 1.5625rem;
-  --summary-title-size: 1.3rem;
-  --btn-font-size: 1rem;
-  --circle-text-size: 0.875rem;
+  --size-result: 1rem;
+  --size-score: clamp(2.8rem, 8vw, 3.4375rem);
+  --size-feedback-status: 1.5625rem;
+  --size-summary-title: 1.3rem;
+  --size-btn-font: 1rem;
+  --size-circle-text: 0.875rem;
 }
 
 /* --- Base Styles --- */
@@ -66,7 +64,7 @@ html {
 
 body {
   font-family: var(--font-family);
-  background-color: var(--Light-lavender);
+  background-color: var(--color-light-lavender);
 }
 
 .container {
@@ -85,12 +83,12 @@ body {
 /* --- Wrapper --- */
 .card-wrapper {
   display: flex;
-  background-color: var(--White);
+  background-color: var(--color-white);
   max-width: var(--card-max-width);
   width: 100%;
   border-radius: var(--radius-card);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 /* --- Left Section (Result) --- */
@@ -101,18 +99,18 @@ body {
   align-items: center;
   background: linear-gradient(
     to bottom,
-    var(--slate-blue-background),
-    var(--royal-blue-background)
+    var(--color-bg-slate-blue),
+    var(--color-bg-royal-blue)
   );
-  border-radius: var(--radius-card);
+  
   padding: var(--padding-card);
   text-align: center;
 }
 
 .result-title {
-  font-size: var(--result-size);
+  font-size: var(--size-result);
   font-weight: 800;
-  color: var(--Light-lavender);
+  color: var(--color-light-lavender);
 }
 
 .score-circle {
@@ -120,27 +118,27 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  height: 140px;
+  width: var(--circle-size); 
+  height: var(--circle-size); 
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
-    var(--circle-color),
-    var(--button-color)
+    var(--color-circle),
+    var(--color-btn-hover)
   );
 }
 
 .final-score {
-  color: var(--White);
-  font-size: var(--score-size);
+  color: var(--color-white);
+  font-size: var(--size-score);
   text-align: center;
   margin-top: 1.25rem;
   font-weight: 800;
 }
 
 .total-score {
-  color: var(--Light-lavender);
-  font-size: var(--circle-text-size);
+  color: var(--color-light-lavender);
+  font-size: var(--size-circle-text);
   margin-top: 0.2rem;
   font-weight: 500;
 }
@@ -153,26 +151,26 @@ body {
 }
 
 .feedback-status {
-  color: var(--White);
-  font-size: var(--feedback-status-size);
+  color: var(--color-white);
+  font-size: var(--size-feedback-status);
   font-weight: 700;
 }
 
 .feedback-text {
   text-align: center;
-  color: var(--Light-lavender);
+  color: var(--color-light-lavender);
   margin-top: 0.625rem;
   text-align-last: center;
   max-width: var(--feedback-text-max-width);
   margin-left: auto;
   margin-right: auto;
   line-height: 1.3;
-  font-size: var(--result-size);
+  font-size: var(--size-result);
 }
 
 /* --- Right Section (Summary) --- */
 .summary {
-  background-color: var(--White);
+  background-color: var(--color-white);
   padding: var(--padding-card);
   display: flex;
   flex-direction: column;
@@ -181,8 +179,8 @@ body {
 }
 
 .summary-title {
-  font-size: var(--summary-title-size);
-  color: var(--Dark-gray-blue);
+  font-size: var(--size-summary-title);
+  color: var(--color-dark-gray-blue);
   padding: 0;
   font-weight: 700;
 }
@@ -212,41 +210,41 @@ body {
 
 .item-score {
   font-weight: 500;
-  color: var(--Light-gray);
+  color: var(--color-light-gray);
 }
 
 .score-num {
   font-weight: 800;
-  color: var(--Dark-gray-blue);
+  color: var(--color-dark-gray-blue);
 }
 
 /* --- Summary Categories (Dynamic colors from root) --- */
 .reaction {
   width: 100%;
   border-radius: var(--radius-item);
-  background-color: hsla(var(--Reaction-value), 0.07);
-  color: hsl(var(--Reaction-value));
+  background-color: hsla(var(--color-reaction), 0.07);
+  color: hsl(var(--color-reaction));
 }
 
 .memory {
   width: 100%;
   border-radius: var(--radius-item);
-  background-color: hsla(var(--Memory-value), 0.07);
-  color: hsl(var(--Memory-value));
+  background-color: hsla(var(--color-memory), 0.07);
+  color: hsl(var(--color-memory));
 }
 
 .verbal {
   width: 100%;
   border-radius: var(--radius-item);
-  background-color: hsla(var(--verbal-value), 0.07);
-  color: hsl(var(--verbal-value));
+  background-color: hsla(var(--color-verbal), 0.07);
+  color: hsl(var(--color-verbal));
 }
 
 .visual {
   width: 100%;
   border-radius: var(--radius-item);
-  background-color: hsla(var(--visual-value), 0.07);
-  color: hsl(var(--visual-value));
+  background-color: hsla(var(--color-visual), 0.07);
+  color: hsl(var(--color-visual));
 }
 
 /* --- Button Styles --- */
@@ -255,9 +253,9 @@ body {
   width: 100%;
   border-radius: var(--radius-btn);
   border: none;
-  background-color: var(--Dark-gray-blue);
-  color: var(--White);
-  font-size: var(--btn-font-size);
+  background-color: var(--color-dark-gray-blue);
+  color: var(--color-white);
+  font-size: var(--size-btn-font);
   font-weight: 700;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -266,7 +264,7 @@ body {
 .continue-btn:hover {
   background: linear-gradient(
     to bottom,
-    var(--slate-blue-background),
-    var(--royal-blue-background)
+    var(--color-bg-slate-blue),
+    var(--color-bg-royal-blue)
   );
 }
