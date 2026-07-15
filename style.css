@@ -35,7 +35,9 @@
   --gap-item-content: 10px;
   
   --feedback-text-max-width: 14.375rem;
-  --card-max-width: 650px; 
+  
+
+  --card-max-width: clamp(21.875rem, 90vw, 40.625rem); 
 
   /* --- Circle Responsive Size --- */
   --circle-size: clamp(7.5rem, 15vw, 8.75rem); 
@@ -157,7 +159,7 @@ body {
 }
 
 .feedback-text {
-  text-align: center; 
+  text-align: center;
   color: var(--color-light-lavender);
   margin-top: 0.625rem;
   max-width: var(--feedback-text-max-width);
@@ -269,7 +271,7 @@ body {
 /* --- Responsive Media Query --- */
 @media (max-width: 600px) {
   .card-wrapper {
-    flex-direction: column; 
+    flex-direction: column;
     border-radius: 0; 
   }
   
