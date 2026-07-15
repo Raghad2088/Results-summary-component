@@ -1,80 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | Results summary component</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Results summary component</title>
 
-  <!-- 1. Google Fonts loaded first -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- 1. Google Fonts loaded first -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- 2. Your Stylesheet loaded second -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!-- 2. Your Stylesheet loaded second -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card-wrapper">
+        <!-- Left Section: Result -->
+        <section class="result">
+          <h1 class="result-title">Your Result</h1>
+          <div class="score-circle">
+            <span class="final-score">76</span>
+            <span class="total-score">of 100</span>
+          </div>
+          <div class="feedback-group">
+            <p class="feedback-status">Great</p>
+            <p class="feedback-text">
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </section>
 
-  <main class="container">
-    <div class="card-wrapper">
-      
-      <!-- Left Section: Result -->
-      <section class="result">
-        <h1 class="result-title">Your Result</h1>
-        <div class="score-circle">
-          <span class="final-score">76</span>
-          <span class="total-score">of 100</span>
-        </div>
-        <div class="feedback-group">
-          <p class="feedback-status">Great</p>
-          <p class="feedback-text">You scored higher than 65% of the people who have taken these tests.</p>
-        </div>
-      </section>
+        <!-- Right Section: Summary -->
+        <section class="summary">
+          <h2 class="summary-title">Summary</h2>
+          <ul class="summary-list">
+            <li class="summary-item reaction">
+              <div class="category-info">
+                <img src="icon-reaction.svg" alt="" aria-hidden="true" />
+                <span>Reaction</span>
+              </div>
+              <p class="item-score"><span class="score-num">80</span> / 100</p>
+            </li>
 
-      <!-- Right Section: Summary -->
-      <section class="summary">
-        <h2 class="summary-title">Summary</h2>
-        <ul class="summary-list">
-          
-          <li class="summary-item reaction">
-            <div class="category-info">
-              <img src="./assets/images/icon-reaction.svg" alt="" aria-hidden="true">
-              <span>Reaction</span>
-            </div>
-            <p class="item-score"><span class="score-num">80</span> / 100</p>
-          </li>
+            <li class="summary-item memory">
+              <div class="category-info">
+                <img src="icon-memory.svg" alt="" aria-hidden="true" />
+                <span>Memory</span>
+              </div>
+              <p class="item-score"><span class="score-num">92</span> / 100</p>
+            </li>
 
-          <li class="summary-item memory">
-            <div class="category-info">
-              <img src="./assets/images/icon-memory.svg" alt="" aria-hidden="true">
-              <span>Memory</span>
-            </div>
-            <p class="item-score"><span class="score-num">92</span> / 100</p>
-          </li>
+            <li class="summary-item verbal">
+              <div class="category-info">
+                <img src="icon-verbal.svg" alt="" aria-hidden="true" />
+                <span>Verbal</span>
+              </div>
+              <p class="item-score"><span class="score-num">61</span> / 100</p>
+            </li>
 
-          <li class="summary-item verbal">
-            <div class="category-info">
-              <img src="./assets/images/icon-verbal.svg" alt="" aria-hidden="true">
-              <span>Verbal</span>
-            </div>
-            <p class="item-score"><span class="score-num">61</span> / 100</p>
-          </li>
-
-          <li class="summary-item visual">
-            <div class="category-info">
-              <img src="./assets/images/icon-visual.svg" alt="" aria-hidden="true">
-              <span>Visual</span>
-            </div>
-            <p class="item-score"><span class="score-num">72</span> / 100</p>
-          </li>
-
-        </ul>
-        <button class="continue-btn">Continue</button>
-      </section>
-
-    </div>
-  </main>
-
-</body>
+            <li class="summary-item visual">
+              <div class="category-info">
+                <img src="icon-visual.svg" alt="" aria-hidden="true" />
+                <span>Visual</span>
+              </div>
+              <p class="item-score"><span class="score-num">72</span> / 100</p>
+            </li>
+          </ul>
+          <button class="continue-btn">Continue</button>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
