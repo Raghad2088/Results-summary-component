@@ -35,8 +35,8 @@ Through this challenge, I needed to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://raghad2088.github.io/Results-summary-component
+- Live Site URL: https://raghad2088.github.io/Results-summary-component/
 
 ---
 
