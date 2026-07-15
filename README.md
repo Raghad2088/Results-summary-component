@@ -35,7 +35,7 @@ Through this challenge, I needed to:
 
 ### Links
 
-- Solution URL: https://raghad2088.github.io/Results-summary-component
+- Solution URL: https://github.com/raghad2088/Results-summary-component
 - Live Site URL: https://raghad2088.github.io/Results-summary-component/
 
 ---
