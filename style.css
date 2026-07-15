@@ -6,8 +6,8 @@
   --color-visual: 234, 85%, 45%;
 
   /* --- Colors (Result Section) --- */
-  --color-circle: hsla(256, 72%, 46%, 1);
-  --color-btn-hover: hsla(241, 72%, 46%, 0);
+  --color-circle-start: hsla(256, 72%, 46%, 1);
+  --color-circle-end: hsla(241, 72%, 46%, 0);
   
   /* --- Background Colors (Gradients) --- */
   --color-bg-slate-blue: hsl(252, 100%, 67%);
@@ -19,13 +19,13 @@
   --color-light-lavender: hsl(241, 100%, 89%);
   --color-dark-gray-blue: hsl(224, 30%, 27%);
   
-  /* HSL representation with hsla for cross-browser opacity support */
+  
   --color-light-gray: hsla(241, 100%, 89%, 0.6); 
 
-  /* --- Layout & Spacing Variables --- */
+  /* --- Layout & Spacing Variables (All in rem) --- */
   --radius-card: 1.875rem;
   --radius-item: 0.75rem;
-  --radius-btn: 3.125rem;
+  --radius-btn: 3.125rem; 
   
   --padding-container: 1.25rem;
   --padding-card: clamp(1.5rem, 5vw, 2.5rem); 
@@ -34,7 +34,7 @@
   
   --gap-layout: 1.5rem;
   --gap-list: 1rem;
-  --gap-item-content: 0.625rem;
+  --gap-item-content: 0.625rem; 
   
   --feedback-text-max-width: 14.375rem;
   
@@ -69,7 +69,8 @@ html {
 
 body {
   font-family: var(--font-family);
-   background-color: var(--color-pale-blue);
+  background-color: var(--color-pale-blue);
+  min-height: 100vh;
 }
 
 /* 📱 Mobile-First Base Styles (Default for small screens) */
@@ -80,7 +81,9 @@ body {
   min-height: 100vh;
   padding: 0; 
 }
-.result, .summary {
+
+.container .result,
+.container .summary {
   flex: 1;
 }
 
@@ -92,7 +95,7 @@ body {
   max-width: var(--card-max-width);
   width: 100%;
   border-radius: 0; 
-  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.05); 
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.05);
   overflow: hidden; 
 }
 
@@ -127,8 +130,8 @@ body {
   border-radius: 50%;
   background: linear-gradient(
     to bottom,
-    var(--color-circle),
-    var(--color-btn-hover)
+    var(--color-circle-start),
+    var(--color-circle-end)
   );
 }
 
@@ -256,7 +259,19 @@ body {
   transition: background 0.3s ease;
 }
 
+/* 🖱️ تأثير تمرير الفأرة (Hover) للزر */
 .continue-btn:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-slate-blue),
+    var(--color-bg-royal-blue)
+  );
+}
+
+
+.continue-btn:focus-visible {
+  outline: 3px solid var(--color-bg-royal-blue); 
+  outline-offset: 3px;
   background: linear-gradient(
     to bottom,
     var(--color-bg-slate-blue),
