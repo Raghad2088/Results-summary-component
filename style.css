@@ -196,6 +196,7 @@ body {
   margin: 0;
 }
 
+/* 🌟 تم تجميع الخصائص المشتركة لجميع عناصر القائمة هنا لمنع التكرار */
 .summary-item {
   list-style: none;
   display: flex;
@@ -203,6 +204,7 @@ body {
   align-items: center;
   padding: var(--padding-item);
   border-radius: var(--radius-item);
+  width: 100%; 
 }
 
 .category-info {
@@ -221,31 +223,23 @@ body {
   color: var(--color-dark-gray-blue);
 }
 
-/* --- Summary Categories --- */
+/* 🌟 الآن الفئات تحتوي فقط على الأنماط اللونية الخاصة بها */
 .reaction {
-  width: 100%;
-  border-radius: var(--radius-item);
   background-color: hsla(var(--color-reaction), 0.07);
   color: hsl(var(--color-reaction));
 }
 
 .memory {
-  width: 100%;
-  border-radius: var(--radius-item);
   background-color: hsla(var(--color-memory), 0.07);
   color: hsl(var(--color-memory));
 }
 
 .verbal {
-  width: 100%;
-  border-radius: var(--radius-item);
   background-color: hsla(var(--color-verbal), 0.07);
   color: hsl(var(--color-verbal));
 }
 
 .visual {
-  width: 100%;
-  border-radius: var(--radius-item);
   background-color: hsla(var(--color-visual), 0.07);
   color: hsl(var(--color-visual));
 }
