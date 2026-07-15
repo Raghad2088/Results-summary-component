@@ -44,10 +44,10 @@ Through this challenge, I needed to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties (Variables)
-- Flexbox (Layout & alignment)
-- CSS Modern functions (`clamp()`)
+- Semantic HTML5 markup.
+- CSS custom properties (Variables).
+- Flexbox (Layout & alignment).
+- CSS Modern functions (`clamp()`).
 
 ### What I learned
 
