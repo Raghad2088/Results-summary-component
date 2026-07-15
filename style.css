@@ -71,6 +71,7 @@ body {
   font-family: var(--font-family);
   background-color: var(--color-pale-blue);
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 /* 📱 Mobile-First Base Styles (Default for small screens) */
