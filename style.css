@@ -35,10 +35,11 @@
   --gap-item-content: 10px;
   
   --feedback-text-max-width: 14.375rem;
-  --card-max-width: clamp(350px, 90vw, 650px);
+  --card-max-width: 650px; 
 
   /* --- Circle Responsive Size --- */
   --circle-size: clamp(7.5rem, 15vw, 8.75rem); 
+
   /* --- Typography --- */
   --font-family: "Hanken Grotesk", sans-serif;
   --size-result: 1rem;
@@ -102,7 +103,6 @@ body {
     var(--color-bg-slate-blue),
     var(--color-bg-royal-blue)
   );
-  
   padding: var(--padding-card);
   text-align: center;
 }
@@ -157,13 +157,10 @@ body {
 }
 
 .feedback-text {
-  text-align: center;
+  text-align: center; 
   color: var(--color-light-lavender);
   margin-top: 0.625rem;
-  text-align-last: center;
   max-width: var(--feedback-text-max-width);
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.3;
   font-size: var(--size-result);
 }
@@ -267,4 +264,16 @@ body {
     var(--color-bg-slate-blue),
     var(--color-bg-royal-blue)
   );
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 600px) {
+  .card-wrapper {
+    flex-direction: column; 
+    border-radius: 0; 
+  }
+  
+  .container {
+    padding: 0; 
+  }
 }
