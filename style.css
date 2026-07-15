@@ -18,12 +18,14 @@
   --color-pale-blue: hsl(221, 100%, 96%);
   --color-light-lavender: hsl(241, 100%, 89%);
   --color-dark-gray-blue: hsl(224, 30%, 27%);
-  --color-light-gray: hsl(241, 100%, 89%, 0.6); 
+  
+  
+  --color-light-gray: hsla(241, 100%, 89%, 0.6); 
 
-  /* --- Layout & Spacing Variables --- */
+  /* --- Layout & Spacing Variables (All converted to rem) --- */
   --radius-card: 1.875rem;
   --radius-item: 0.75rem;
-  --radius-btn: 3.125rem;
+  --radius-btn: 3.125rem; 
   
   --padding-container: 1.25rem;
   --padding-card: clamp(1.5rem, 5vw, 2.5rem); 
@@ -32,11 +34,11 @@
   
   --gap-layout: 1.5rem;
   --gap-list: 1rem;
-  --gap-item-content: 0.625rem;
+  --gap-item-content: 0.625rem; 
   
   --feedback-text-max-width: 14.375rem;
   
-  /* 🌟 Fluid card width without hard-coded pixels */
+  /* Fluid card width using rem and clamp */
   --card-max-width: clamp(21.875rem, 90vw, 40.625rem); 
 
   /* --- Circle Responsive Size --- */
@@ -70,12 +72,13 @@ body {
   background-color: var(--color-light-lavender);
 }
 
+/* 📱 Mobile-First Base Styles (Default for small screens) */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: var(--padding-container);
+  padding: 0; 
 }
 
 .container .result,
@@ -83,14 +86,15 @@ body {
   flex: 1;
 }
 
-/* --- Wrapper --- */
+/* --- Wrapper (Mobile-First) --- */
 .card-wrapper {
   display: flex;
+  flex-direction: column; 
   background-color: var(--color-white);
   max-width: var(--card-max-width);
   width: 100%;
-  border-radius: var(--radius-card);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 0; 
+  box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.05); 
   overflow: hidden; 
 }
 
@@ -217,7 +221,7 @@ body {
   color: var(--color-dark-gray-blue);
 }
 
-/* --- Summary Categories (Dynamic colors from root) --- */
+/* --- Summary Categories --- */
 .reaction {
   width: 100%;
   border-radius: var(--radius-item);
@@ -268,14 +272,15 @@ body {
   );
 }
 
-/* --- Responsive Media Query --- */
-@media (max-width: 600px) {
-  .card-wrapper {
-    flex-direction: column;
-    border-radius: 0; 
-  }
+/* 💻 Responsive Desktop Breakpoint (Mobile-First Approach) */
   
+@media (min-width: 37.5em) {
   .container {
-    padding: 0; 
+    padding: 
+  }
+
+  .card-wrapper {
+    flex-direction: row; 
+    border-radius: var
   }
 }
